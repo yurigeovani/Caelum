@@ -6,14 +6,12 @@ public class Exercicio01 {
 
 	public static void main(String[] args) {
 
+		Fibonacci f = new Fibonacci();
 		Scanner scan = new Scanner (System.in);
 		
 		System.out.print("Informe o N termo: ");
 		int termo = scan.nextInt();
 		
-		for(int i=0; i<=termo;i++) {
-			System.out.print();
-		}
+		f.calcularTermo(termo);
 	}
-
 }
