@@ -14,9 +14,8 @@ public class Exercicio01 {
 //		
 //		f.calcularTermo(termo);
 		
-//		for(int i=0;i<=6;i++) {
-			System.out.print(Fibonacci.fibonacciRecursico(6) + " ");
-	//	}
-		
+		for(int i=0;i<=6;i++) {
+			System.out.print(Fibonacci.fibonacciRecursico(i) + " ");
+		}
 	}
 }
