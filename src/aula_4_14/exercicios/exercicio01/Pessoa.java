@@ -32,7 +32,8 @@ public class Pessoa {
 		return "Pessoa [nome=" + nome + ", idade=" + idade + "]";
 	}
 	
-	public void fazAniversario() {
+	public String fazAniversario() {
 		setIdade(getIdade()+1);
+		return this.toString();
 	}
 }

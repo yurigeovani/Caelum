@@ -7,43 +7,54 @@ public class Exercicio01 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		Pessoa pessoa[] = new Pessoa[10];
+		Pessoa[] pessoas = new Pessoa[10];
 		int contador = 0;
+		int escolha = 999;
 		
-		System.out.println("############### CALCULA ANIVERS¡RIO ###############");
-		System.out.println("OP«’ES");
-		System.out.println("1) Cadastrar pessoa;");
-		System.out.println("2) Calcular anivers·rio;");
-		System.out.println("3) Exibir dados;");
-		System.out.println("0) Sair.");
-		System.out.print("Escolha a opÁ„o desejada: ");
-		int escolha = scan.nextInt();
-		
-		switch (escolha) {
-		case 1:
-			System.out.print("Nome: ");
-			String nome = scan.nextLine();
-			//pessoa[contador].setNome(nome);
-			//pessoa[contador].setNome(scan.nextLine());
-			System.out.print("Idade: ");
-			int idade = scan.nextInt();
-			//pessoa[contador].setIdade(idade);
-			//pessoa[contador].setIdade(scan.nextInt());
-			contador++;
-			break;
-		case 2:
-			System.out.print("Informe o ID da pessoa: ");
-			pessoa[scan.nextInt()].fazAniversario();
-			pessoa[scan.nextInt()].toString();
-			break;
-		case 3:
-			System.out.print("Informe o ID da pessoa: ");
-			pessoa[scan.nextInt()].toString();
-			break;
-		case 0: 
-			break;
-		default: System.out.println("Informe uma opÁ„o v·lida!");
-			break;
+		while(escolha!=0) {
+			System.out.println("############### CALCULA ANIVERS√ÅRIO ###############");
+			System.out.println("OP√á√ïES");
+			System.out.println("1) Cadastrar pessoa;");
+			System.out.println("2) Calcular anivers√°rio;");
+			System.out.println("3) Exibir dados;");
+			System.out.println("0) Sair.");
+			System.out.print("Escolha a op√ß√£o desejada: ");
+			escolha = scan.nextInt();
+			
+			switch (escolha) {
+			case 1:
+				Pessoa pessoa = new Pessoa();
+				System.out.print("Nome: ");
+				pessoa.setNome(scan.next());
+				System.out.print("Idade: ");
+				pessoa.setIdade(scan.nextInt());
+				pessoas[contador]=pessoa;
+				contador++;
+				break;
+			case 2:
+				System.out.print("Informe o ID da pessoa: ");
+				System.out.println(pessoas[scan.nextInt()].fazAniversario());
+				break;
+			case 3:
+				System.out.print("Informe o ID da pessoa: ");
+				System.out.println(pessoas[scan.nextInt()].toString());
+				break;
+			case 0: 
+				System.out.println("Tem certeza que deseja sair do sistema? [S/N]");
+				String sair = scan.next();
+				if(sair.equalsIgnoreCase("Sim") || sair.equalsIgnoreCase("S")) {
+					escolha = 0;
+				} else if (sair.equalsIgnoreCase("N√£o") || sair.equalsIgnoreCase("Nao") || sair.equalsIgnoreCase("N")) {
+					escolha = 999;
+				} else {
+					System.out.println("Informe uma op√ß√£o v√°lida!");
+				}
+				break;
+			default: 
+				System.out.println("Informe uma op√ß√£o v√°lida!");
+				break;
+			}
 		}
+		
 	}
 }
