@@ -20,7 +20,8 @@ public class Exercicio02 {
 		Scanner scan = new Scanner(System.in);
 		
 		Porta porta = new Porta();
-		System.out.print("Informe a cor:");
+		String abreFecha;
+		System.out.print("Informe a cor: ");
 		porta.setCor(scan.next());
 		System.out.println("Informe as dimensões: ");
 		System.out.print("Altura: ");
@@ -32,9 +33,19 @@ public class Exercicio02 {
 		
 		if(porta.estaAberta()) {
 			System.out.println("A porta está aberta, deseja fechar?");
+			abreFecha = scan.next();
+			if(abreFecha.equalsIgnoreCase("S") | abreFecha.equalsIgnoreCase("Sim")) {
+				porta.setAberta(false);
+			}
 		} else {
 			System.out.println("A porta está fechada, deseja abrir?");
+			abreFecha = scan.next();
+			if(abreFecha.equalsIgnoreCase("S") | abreFecha.equalsIgnoreCase("Sim")) {
+				porta.setAberta(true);
+			}
 		}
+		
+		System.out.println(porta);
 		
 	
 	}

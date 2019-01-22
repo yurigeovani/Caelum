@@ -9,6 +9,7 @@ public class Porta {
 	
 	public Porta() {
 		super();
+		this.aberta = false;
 	}
 	
 	public Porta(boolean aberta, String cor, double dimensaoX, double dimensaoY, double dimensaoZ) {
