@@ -12,13 +12,13 @@ public class Exercicio01 {
 		int escolha = 999;
 		
 		while(escolha!=0) {
-			System.out.println("############### CALCULA ANIVERS√ÅRIO ###############");
-			System.out.println("OP√á√ïES");
+			System.out.println("############### CALCULA ANIVERS¡RIO ###############");
+			System.out.println("OP«’ES");
 			System.out.println("1) Cadastrar pessoa;");
-			System.out.println("2) Calcular anivers√°rio;");
+			System.out.println("2) Calcular anivers·rio;");
 			System.out.println("3) Exibir dados;");
 			System.out.println("0) Sair.");
-			System.out.print("Escolha a op√ß√£o desejada: ");
+			System.out.print("Escolha a opÁ„o desejada: ");
 			escolha = scan.nextInt();
 			
 			switch (escolha) {
@@ -44,14 +44,15 @@ public class Exercicio01 {
 				String sair = scan.next();
 				if(sair.equalsIgnoreCase("Sim") || sair.equalsIgnoreCase("S")) {
 					escolha = 0;
-				} else if (sair.equalsIgnoreCase("N√£o") || sair.equalsIgnoreCase("Nao") || sair.equalsIgnoreCase("N")) {
+				} else if (sair.equalsIgnoreCase("N„o") || sair.equalsIgnoreCase("Nao") || sair.equalsIgnoreCase("N")) {
 					escolha = 999;
 				} else {
-					System.out.println("Informe uma op√ß√£o v√°lida!");
+					System.out.println("Informe uma opÁ„o v·lida!");
+					escolha = 999;
 				}
 				break;
 			default: 
-				System.out.println("Informe uma op√ß√£o v√°lida!");
+				System.out.println("Informe uma opÁ„o v·lida!");
 				break;
 			}
 		}

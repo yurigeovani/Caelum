@@ -18,17 +18,38 @@ public class Exercicio03 {
 		
 		Casa casa = new Casa();
 		Porta[] portas = new Porta[3];
-		
-		System.out.print("Informe a cor da casa: ");
-		casa.setCor(scan.next());
-		
-		for(int i=0; i<portas.length;i++) {
-			String corPorta;
-			System.out.print("Informe a cor da porta " + (i+1) + ": ");
-			corPorta = scan.next();
-			portas[i].setCor(corPorta);
+		boolean sair = false;
+		int escolha = 0;
+				
+		while(!sair) {
+			
+			casa.opcoes();
+			escolha=scan.nextInt();
+			
+			switch (escolha) {
+			case 1:
+				System.out.print("Informe a cor da casa: ");
+				casa.setCor(scan.next());
+				break;
+			case 2:
+				for(int i=0; i<portas.length;i++) {
+					Porta porta = new Porta();
+					System.out.print("Informe a cor da porta " + (i+1) + ": ");
+					porta.setCor(scan.next());
+					portas[i]=porta;
+				}
+				break;
+			case 3:
+				System.out.print("Informe a porta: ");
+				casa.abrirFecharPorta(scan.nextInt());
+				break;
+			case 4:
+				casa.status();
+				break;
+			default:
+				System.out.println("Escolha uma opção válida!");
+				break;
+			}
 		}
-		
-		System.out.println(casa);
 	}
 }
