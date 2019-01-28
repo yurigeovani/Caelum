@@ -25,6 +25,8 @@ public class Exercicio03 {
 			
 			casa.opcoes();
 			escolha=scan.nextInt();
+			casa.setPortas(portas);
+
 			
 			switch (escolha) {
 			case 1:
@@ -33,8 +35,8 @@ public class Exercicio03 {
 				break;
 			case 2:
 				for(int i=0; i<portas.length;i++) {
-					Porta porta = new Porta();
 					System.out.print("Informe a cor da porta " + (i+1) + ": ");
+					Porta porta = new Porta();
 					porta.setCor(scan.next());
 					portas[i]=porta;
 				}
@@ -45,6 +47,12 @@ public class Exercicio03 {
 				break;
 			case 4:
 				casa.status();
+				break;
+			case 5:
+				System.out.println("Quantidade de portas abertas: " + casa.quantasPortasEstaoAbertas());
+				break;
+			case 0:
+				sair = true;
 				break;
 			default:
 				System.out.println("Escolha uma opção válida!");
