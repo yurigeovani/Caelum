@@ -9,7 +9,7 @@ public class Casa {
 
 	public Casa() {
 		super();
-		// TODO Auto-generated constructor stub
+		this.totalPortas = 0;
 	}
 	public Casa(String cor, int totalPortas, Porta[] portas) {
 		super();
@@ -48,6 +48,20 @@ public class Casa {
 		System.out.println("2) Pintar porta;");
 		System.out.println("3) Abrir porta;");
 		System.out.println("4) Fechar porta;");
+		System.out.println("5) toString;");
+		System.out.println("0) Sair.");
 		System.out.print("Opção escolhida: ");
+	}
+	
+	public void listarPortas() {
+		//int count = 0;
+		//for(Porta i : portas) {
+			//System.out.println(i);
+			//System.out.println("Porta " + (count+1) +" | " + "COR: "+ i.getCor() + " | " + "ABERTA: " + i.isAberta());
+			//count++;
+		//}
+		for(int i=0;i<portas.length;i++) {
+			System.out.println("Porta " + (i+1) + " | COR: " + portas[i].getCor() + " | ABERTA: " + portas[i].isAberta());
+		}
 	}
 }
