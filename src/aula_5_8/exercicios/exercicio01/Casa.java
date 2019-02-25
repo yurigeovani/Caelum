@@ -8,8 +8,7 @@ public class Casa {
 	private Porta[] portas;
 
 	public Casa() {
-		super();
-		this.totalPortas = 0;
+		
 	}
 	public Casa(String cor, int totalPortas, Porta[] portas) {
 		super();
@@ -61,7 +60,8 @@ public class Casa {
 			//count++;
 		//}
 		for(int i=0;i<portas.length;i++) {
-			System.out.println("Porta " + (i+1) + " | COR: " + portas[i].getCor() + " | ABERTA: " + portas[i].isAberta());
+			System.out.println("Tá chamando!");
+//			System.out.println("Porta " + (i+1) + " | COR: " + portas[i].getCor() + " | ABERTA: " + portas[i].isAberta());
 		}
 	}
 }

@@ -11,7 +11,7 @@ public class Exercicio01 {
 //			abertas e o método totalDePortas para imprimir o total de portas em sua casa.
 //			
 //			Classe: Casa 
-//			Atributos: cor, totalDePortas, portas[] 
+//			Atributos: cor, totalDePortas, portas[]
 //			Métodos: void pinta(String s), int quantasPortasEstaoAbertas(), void adicionaPorta(Porta p), int totalDePortas()
 
 		Scanner scan = new Scanner(System.in);
